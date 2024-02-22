@@ -30,7 +30,7 @@ defaults:
 
 entries:
   - name: "SHARED_LOAD"
-    comment: Warehouse for Shared ELT - DEV
+    comment: Warehouse for Shared ELT - PRD
 
 
   

@@ -28,7 +28,9 @@ jobs:
 
     - name: Download the toolkit-cli
       shell: bash
-      run: bin/install-toolkit-cli
+      run: |
+        chmod +x bin/install-toolkit-cli
+        bin/install-toolkit-cli
 
     - name: Set up Java 
       uses: actions/setup-java@v3

@@ -1,0 +1,34 @@
+defaults:
+  # Is the user created with SCIM? Provision tool with do ALTER statements only.
+  alterableOnly: false
+
+  # user defaults
+  tags: {}
+  password: null
+  login_name: null
+  display_name: null
+  first_name: null
+  middle_name: null
+  last_name: null
+  email: null
+  must_change_password: false
+  disabled: false
+  default_warehouse: null
+  default_namespace: null
+  default_role: null
+  default_secondary_roles: null
+  rsa_public_key: null
+  rsa_public_key_2: null
+  comment: null
+  days_to_expiry: 0
+
+entries:
+  - username: "SVC_PRD_WF_AP_BILL_CODING_USER"
+    rsa_public_key: "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxieBx+yRjTEi/v2qyKM83c/aRdZhdynoKHDp/S9E1pFw6EClMyVK/7HExfGSYllwQbFuWgbtl9xSAi/pqD/3VdBvKk0L42jXaP55FeKt0hnApEC1LTo/aaqP0H1rkkzrqmpYjgysdamuwKYAmDAGXEpHzUfTT0e95Narxp+Bkjr++NUlaXzqzLOYo21HBeqsZ3ipD83oAZQ0G2KcqNGAD7iPtN9GABTWxm6aVR3FmJ/bGRfww8isxp9KA6ZukC8dC8ZETAWm3MjC+GMobx2H7Nf3wHqK7HSNnkT2e0Tsp7zoQ4Bv9MgtX8lZrO+4LPdr1qUEpA6oCCFTjil80/byZwIDAQAB"
+
+#    tags:
+#      - name: mydb.myschema.mytag
+#        value: myval
+#  - username: "SVC_PHDATA"
+#    default_warehouse: "PHDATA_WH"
+#    default_role: "FR_PHDATA"

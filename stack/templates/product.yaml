@@ -1,0 +1,198 @@
+databases:
+  - name: "P_{{ env }}_{{ product }}"
+  
+schemas:
+{% for s in schemas %}
+  - name: {{ s.name }}
+    database: "P_{{ env }}_{{ product }}"
+{% endfor %}
+
+roles:
+  # Data
+ # - name: DR_P_{{ env }}_{{ product }}_ADMIN
+  - name: DR_P_{{ env }}_{{ product }}_RW
+  - name: DR_P_{{ env }}_{{ product }}_RO
+{% for s in schemas %}
+  - name: DR_P_{{ env }}_{{ product }}_{{ s.name }}_SRW
+  - name: DR_P_{{ env }}_{{ product }}_{{ s.name }}_SRO
+{% endfor %}
+
+privilegeGrants:
+# DATABASE READ
+{% set privs = ({"priv": "USAGE", "type": "DATABASE"},
+                {"priv": "USAGE", "type": "ALL SCHEMAS IN DATABASE"},
+                {"priv": "USAGE", "type": "FUTURE SCHEMAS IN DATABASE"},
+                {"priv": "SELECT", "type": "ALL TABLES IN DATABASE"},
+                {"priv": "SELECT", "type": "FUTURE TABLES IN DATABASE"},
+                {"priv": "SELECT", "type": "ALL EXTERNAL TABLES IN DATABASE"},
+                {"priv": "SELECT", "type": "FUTURE EXTERNAL TABLES IN DATABASE"},
+                {"priv": "SELECT", "type": "ALL MATERIALIZED VIEWS IN DATABASE"},
+                {"priv": "SELECT", "type": "FUTURE MATERIALIZED VIEWS IN DATABASE"},
+                {"priv": "USAGE", "type": "ALL FUNCTIONS IN DATABASE"},
+                {"priv": "USAGE", "type": "FUTURE FUNCTIONS IN DATABASE"},
+                {"priv": "USAGE", "type": "ALL PROCEDURES IN DATABASE"},
+                {"priv": "USAGE", "type": "FUTURE PROCEDURES IN DATABASE"},
+                {"priv": "USAGE", "type": "ALL SEQUENCES IN DATABASE"},
+                {"priv": "USAGE", "type": "FUTURE SEQUENCES IN DATABASE"}
+                ) %}
+
+{% for p in privs %}
+  - privilege: "{{ p.priv }}"
+    objectType: "{{ p.type }}"
+    objectName: "P_{{ env }}_{{ product }}"
+    roleName: "DR_P_{{ env }}_{{ product }}_RO"
+    grantOption: false
+{% endfor %}
+
+# DATABASE VIEW READ
+{% set privs = ({"priv": "USAGE", "type": "DATABASE"},
+                {"priv": "USAGE", "type": "ALL SCHEMAS IN DATABASE"},
+                {"priv": "USAGE", "type": "FUTURE SCHEMAS IN DATABASE"},
+                {"priv": "SELECT", "type": "ALL VIEWS IN DATABASE"},
+                {"priv": "SELECT", "type": "FUTURE VIEWS IN DATABASE"}
+                ) %}
+
+{% for p in privs %}
+  - privilege: "{{ p.priv }}"
+    objectType: "{{ p.type }}"
+    objectName: "P_{{ env }}_{{ product }}"
+    roleName: "DR_P_{{ env }}_{{ product }}_RO"
+    grantOption: false
+{% endfor %}
+
+
+# DATABASE FULL
+{% set privs = ({"priv": "USAGE", "type": "DATABASE"},
+                {"priv": "USAGE", "type": "ALL SCHEMAS IN DATABASE"},
+                {"priv": "USAGE", "type": "FUTURE SCHEMAS IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL TABLES IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE TABLES IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL EXTERNAL TABLES IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE EXTERNAL TABLES IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL VIEWS IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE VIEWS IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL MATERIALIZED VIEWS IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE MATERIALIZED VIEWS IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL FUNCTIONS IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE FUNCTIONS IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL PROCEDURES IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE PROCEDURES IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL SEQUENCES IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE SEQUENCES IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL STREAMS IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE STREAMS IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL TASKS IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE TASKS IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL STAGES IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE STAGES IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL FILE FORMATS IN DATABASE"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE FILE FORMATS IN DATABASE"}
+                ) %}
+
+{% for p in privs %}
+  - privilege: "{{ p.priv }}"
+    objectType: "{{ p.type }}"
+    objectName: "P_{{ env }}_{{ product }}"
+    roleName: "DR_P_{{ env }}_{{ product }}_RW"
+    grantOption: false
+{% endfor %}
+
+{% for s in schemas %}
+# SCHEMA READ
+{% set privs = ({"priv": "USAGE", "type": "SCHEMA"},
+                {"priv": "SELECT", "type": "ALL TABLES IN SCHEMA"},
+                {"priv": "SELECT", "type": "FUTURE TABLES IN SCHEMA"},
+                {"priv": "SELECT", "type": "ALL EXTERNAL TABLES IN SCHEMA"},
+                {"priv": "SELECT", "type": "FUTURE EXTERNAL TABLES IN SCHEMA"},
+                {"priv": "SELECT", "type": "ALL MATERIALIZED VIEWS IN SCHEMA"},
+                {"priv": "SELECT", "type": "FUTURE MATERIALIZED VIEWS IN SCHEMA"},
+                {"priv": "USAGE", "type": "ALL FUNCTIONS IN SCHEMA"},
+                {"priv": "USAGE", "type": "FUTURE FUNCTIONS IN SCHEMA"},
+                {"priv": "USAGE", "type": "ALL PROCEDURES IN SCHEMA"},
+                {"priv": "USAGE", "type": "FUTURE PROCEDURES IN SCHEMA"},
+                {"priv": "USAGE", "type": "ALL SEQUENCES IN SCHEMA"},
+                {"priv": "USAGE", "type": "FUTURE SEQUENCES IN SCHEMA"}
+                ) %}
+
+  - privilege: "USAGE"
+    objectType: DATABASE
+    objectName: "P_{{ env }}_{{ product }}"
+    roleName: "DR_P_{{ env }}_{{ product }}_{{ s.name }}_SRO"
+    grantOption: false
+
+{% for p in privs %}
+  - privilege: "{{ p.priv }}"
+    objectType: "{{ p.type }}"
+    objectName: "P_{{ env }}_{{ product }}.{{ s.name }}"
+    roleName: "DR_P_{{ env }}_{{ product }}_{{ s.name }}_SRO"
+    grantOption: false
+{% endfor %}
+
+
+# SCHEMA FULL
+{% set privs = ({"priv": "ALL PRIVILEGES", "type": "SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL TABLES IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE TABLES IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL EXTERNAL TABLES IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE EXTERNAL TABLES IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL VIEWS IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE VIEWS IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL MATERIALIZED VIEWS IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE MATERIALIZED VIEWS IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL FUNCTIONS IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE FUNCTIONS IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL PROCEDURES IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE PROCEDURES IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL SEQUENCES IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE SEQUENCES IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL STREAMS IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE STREAMS IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL TASKS IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE TASKS IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL STAGES IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE STAGES IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "ALL FILE FORMATS IN SCHEMA"},
+                {"priv": "ALL PRIVILEGES", "type": "FUTURE FILE FORMATS IN SCHEMA"}
+                ) %}
+
+  - privilege: "USAGE"
+    objectType: DATABASE
+    objectName: "P_{{ env }}_{{ product }}"
+    roleName: DR_P_{{ env }}_{{ product }}_{{s.name}}_SRW
+    grantOption: false
+
+{% for p in privs %}
+  - privilege: "{{ p.priv }}"
+    objectType: "{{ p.type }}"
+    objectName: "P_{{ env }}_{{ product }}.{{ s.name }}"
+    roleName: "DR_P_{{ env }}_{{ product }}_{{ s.name }}_SRW"
+    grantOption: false
+{% endfor %}
+
+{% endfor %}
+
+
+roleGrants:
+  - name: "DR_P_{{ env }}_{{ product }}_RO"
+    toRoles:
+      - "DR_P_{{ env }}_{{ product }}_RW"
+  
+  - name: "DR_P_{{ env }}_{{ product }}_RW"
+    toRoles:
+      - "SYSADMIN"
+
+{% for s in schemas %}
+  - name: DR_P_{{ env }}_{{ product }}_{{s.name}}_SRO
+    toRoles:
+      - "DR_P_{{ env }}_{{ product }}_RO"
+
+  - name: DR_P_{{ env }}_{{ product }}_{{s.name}}_SRO
+    toRoles:
+      - "DR_P_{{ env }}_{{ product }}_RO"
+      - "DR_P_{{ env }}_{{ product }}_{{s.name}}_SRW"
+
+  - name: "DR_P_{{ env }}_{{ product }}_{{s.name}}_SRW"
+    toRoles:
+      - "DR_P_{{ env }}_{{ product }}_RW"
+{% endfor %}
+

@@ -24,7 +24,9 @@ defaults:
 
 entries:
   - username: "SVC_PRD_WF_AP_BILL_CODING_USER"
-    rsa_public_key: "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxieBx+yRjTEi/v2qyKM83c/aRdZhdynoKHDp/S9E1pFw6EClMyVK/7HExfGSYllwQbFuWgbtl9xSAi/pqD/3VdBvKk0L42jXaP55FeKt0hnApEC1LTo/aaqP0H1rkkzrqmpYjgysdamuwKYAmDAGXEpHzUfTT0e95Narxp+Bkjr++NUlaXzqzLOYo21HBeqsZ3ipD83oAZQ0G2KcqNGAD7iPtN9GABTWxm6aVR3FmJ/bGRfww8isxp9KA6ZukC8dC8ZETAWm3MjC+GMobx2H7Nf3wHqK7HSNnkT2e0Tsp7zoQ4Bv9MgtX8lZrO+4LPdr1qUEpA6oCCFTjil80/byZwIDAQAB"
+    default_warehouse: "PRD_SHARED_LOAD_WH"
+    default_role: "FR_PRD_WF_AP_BILL_CODING"
+    rsa_public_key: "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUoAfvW3Con/7qqeaZHDWlo+xZKO1r6DzabCms7kZGv5MZzJ1r9Tk6x6ybhaEvaea5fKlBEDxfO+si2/0CZWe9MjCrQkIM/Y1zGB84H5GJm81GPIb2du1KydftusTnSKeTfz45TsfjEOSbkOgriVkicwHZORBlcex9gLcjaHnZmu7SzICIwFpJDG+UXg4KwiFiRYWQZliJbR2dqHKK6mWLzrCN2+2snVffAT5ph8m5/NZX0aTGPHePm8d1Zhlz9xV472sUOQS9+KJV9+mST6cmt7Q9XcSMCbsEWv4eXi/yjNy2GklZOmUBjCwPPdiDmzn3ktXUTw7CcouDQi5CrgEwIDAQAB"
 
 #    tags:
 #      - name: mydb.myschema.mytag

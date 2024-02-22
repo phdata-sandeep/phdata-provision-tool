@@ -1,0 +1,12 @@
+defaults:
+  users_granted: []
+  granted_roles: []
+entries:
+  - role_name: "FR_PRD_WF_AP_BILL_CODING"
+    granted_roles: 
+      - name: "DR_S_PRD_WF_AP_BILL_CODING_RW"
+      - name: "AR_PRD_SHARED_LOAD"
+    users_granted:
+      - name: "SVC_PRD_WF_AP_BILL_CODING_USER"
+    
+

@@ -1,0 +1,10 @@
+defaults:
+   schemas:
+     - name: RAW
+     - name: CLEANED
+  #destroy: true
+entries:
+  - env: PRD
+    source: APP_INTACCT
+  - env: PRD
+    source: WF_AP_BILL_CODING

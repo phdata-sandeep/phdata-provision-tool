@@ -4,29 +4,18 @@ defaults:
 entries:
   - role_name: "FR_DATA_ENGINEERS"
     granted_roles: 
-      - name: "DR_S_PRD_APP_INTACCT_RW"      
-    users_granted:
-      - name: "SVC_PRD_WF_AP_BILL_CODING_USER"
-  - role_name: "FR_DATA_READERS"
-    granted_roles:
-      - name: "DR_S_PRD_APP_INTACCT_RO"
-      - name: "DR_S_PRD_WF_AP_BILL_CODING_RO"
+      - name: "DR_S_PRD_APP_INTACCT_RW"
     users_granted:
       - name: "BALBIR"
       - name: "ANANJUNDAPPA"
       - name: "PSINGHA"
-      - name: "LAVANYAS"      
-  - role_name: "FR_PRD_WF_AP_BILL_CODING"
-    destroy: true
-    granted_roles: 
-      - name: "DR_S_PRD_WF_AP_BILL_CODING_RW"
-      - name: "AR_PRD_SHARED_LOAD"
-    users_granted:
-      - name: "SVC_PRD_WF_AP_BILL_CODING_USER"
+      - name: "LAVANYAS"     
+  - role_name: "FR_DATA_READERS"
+    granted_roles:
+      - name: "DR_S_PRD_APP_INTACCT_RO"
+      - name: "DR_S_PRD_WF_AP_BILL_CODING_RO"
   - role_name: "FR_FIVETRAN"
     users_granted:
-      - name: "PSINGHA"
-      - name: "LAVANYAS"
       - name: "SVC_PRD_WF_AP_BILL_CODING_USER"
     granted_roles: 
       - name: "DR_S_PRD_WF_AP_BILL_CODING_RW"

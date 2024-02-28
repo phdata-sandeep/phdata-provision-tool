@@ -29,6 +29,8 @@ defaults:
       action: SUSPEND_IMMEDIATE
 
 entries:
+  - name: "ENGINEERTEAM"
+    comment: PRD team warehouse
   - name: "SHARED_LOAD"
     comment: Warehouse for Shared ELT - PRD
 

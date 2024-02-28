@@ -20,6 +20,7 @@ roles:
 privilegeGrants:
 # DATABASE READ
 {% set privs = ({"priv": "USAGE", "type": "DATABASE"},
+                {"priv": "CREATE SCHEMA", "type": "DATABASE"},
                 {"priv": "USAGE", "type": "ALL SCHEMAS IN DATABASE"},
                 {"priv": "USAGE", "type": "FUTURE SCHEMAS IN DATABASE"},
                 {"priv": "SELECT", "type": "ALL TABLES IN DATABASE"},

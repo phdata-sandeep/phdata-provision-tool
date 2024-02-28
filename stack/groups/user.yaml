@@ -25,7 +25,7 @@ defaults:
 entries:
   - username: "SVC_PRD_WF_AP_BILL_CODING_USER"
     default_warehouse: "PRD_SHARED_LOAD_WH"
-    default_role: "FR_PRD_WF_AP_BILL_CODING"
+    default_role: "FR_FIVETRAN"
     rsa_public_key: "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUoAfvW3Con/7qqeaZHDWlo+xZKO1r6DzabCms7kZGv5MZzJ1r9Tk6x6ybhaEvaea5fKlBEDxfO+si2/0CZWe9MjCrQkIM/Y1zGB84H5GJm81GPIb2du1KydftusTnSKeTfz45TsfjEOSbkOgriVkicwHZORBlcex9gLcjaHnZmu7SzICIwFpJDG+UXg4KwiFiRYWQZliJbR2dqHKK6mWLzrCN2+2snVffAT5ph8m5/NZX0aTGPHePm8d1Zhlz9xV472sUOQS9+KJV9+mST6cmt7Q9XcSMCbsEWv4eXi/yjNy2GklZOmUBjCwPPdiDmzn3ktXUTw7CcouDQi5CrgEwIDAQAB"
 
 #    tags:

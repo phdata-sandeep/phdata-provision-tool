@@ -19,7 +19,7 @@ entries:
       - name: "BALBIR.PHDATA@CONSEROGLOBAL.COM"
       - name: "AJAY.PHDATA@CONSEROGLOBAL.COM"
       - name: "PSINGHA.PHDATA@CONSEROGLOBAL.COM"
-      - name: "LAVANYAS"
+#      - name: "LAVANYAS"
       - name: "BLEDER.PHDATA@CONSEROGLOBAL.COM"
   - role_name: "FR_FIVETRAN"
     users_granted:

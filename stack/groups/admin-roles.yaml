@@ -2,6 +2,14 @@ template:
   path: admin-roles.yaml
 
 entries: 
+  - admin_role: "ACCOUNTADMIN"
+    user: "SMORCOM.PHDATA@CONSEROGLOBAL.COM"
+
+  - admin_role: "ACCOUNTADMIN"
+    user: "VGOVINDARAJAN.PHDATA@CONSEROGLOBAL.COM"
+  
+  - admin_role: "ACCOUNTADMIN"
+    user: "CCRAWFORD.PHDATA@CONSEROGLOBAL.COM"
 #  - admin_role: "ACCOUNTADMIN"
 #    user: "USER1@PHDATA.IO"
 #

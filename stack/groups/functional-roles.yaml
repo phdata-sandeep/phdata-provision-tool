@@ -3,24 +3,20 @@ defaults:
   granted_roles: []
 entries:
   - role_name: "FR_DATA_ENGINEERS"
-    destroy: true
     granted_roles: 
-      - name: "DR_S_PRD_APP_INTACCT_RW"
-    users_granted:
-      - name: "BALBIR"
-      - name: "ANANJUNDAPPA"
-      - name: "PSINGHA"
-      - name: "LAVANYAS"     
-  - role_name: "FR_DATA_READERS"
-    granted_roles:
       - name: "DR_S_PRD_APP_INTACCT_RO"
       - name: "DR_S_PRD_WF_AP_BILL_CODING_RO"
+      - name: "AR_PRD_ENGINEERTEAM"
     users_granted:  
       - name: "BALBIR.PHDATA@CONSEROGLOBAL.COM"
       - name: "AJAY.PHDATA@CONSEROGLOBAL.COM"
       - name: "PSINGHA.PHDATA@CONSEROGLOBAL.COM"
 #      - name: "LAVANYAS"
       - name: "BLEDER.PHDATA@CONSEROGLOBAL.COM"
+  - role_name: "FR_DATA_READERS"
+    granted_roles:
+      - name: "DR_S_PRD_APP_INTACCT_RO"
+      - name: "DR_S_PRD_WF_AP_BILL_CODING_RO"
   - role_name: "FR_FIVETRAN"
     users_granted:
       - name: "SVC_PRD_WF_AP_BILL_CODING_USER"

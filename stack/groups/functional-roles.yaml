@@ -13,14 +13,28 @@ entries:
       - name: "PSINGHA.PHDATA@CONSEROGLOBAL.COM"
 #      - name: "LAVANYAS"
       - name: "BLEDER.PHDATA@CONSEROGLOBAL.COM"
+
   - role_name: "FR_DATA_READERS"
     granted_roles:
       - name: "DR_S_PRD_APP_INTACCT_RO"
       - name: "DR_S_PRD_WF_AP_BILL_CODING_RO"
+
   - role_name: "FR_FIVETRAN"
     users_granted:
       - name: "SVC_PRD_WF_AP_BILL_CODING_USER"
+      - name: "SVC_PRD_WEBAPP_AP_BILL_CODING_USER"
+      - name: "SVC_PRD_FIVETRAN_USER"
     granted_roles: 
       - name: "DR_S_PRD_WF_AP_BILL_CODING_RW"
-      - name: "AR_PRD_SHARED_LOAD"
+      - name: "AR_PRD_FIVETRAN"
       - name: "DR_S_PRD_APP_INTACCT_RW"
+
+  - role_name: "FR_PRD_AP_BILL_CODING"
+    granted_roles: 
+      - name: "DR_S_PRD_WF_AP_BILL_CODING_RW"     
+      - name: "DR_S_PRD_APP_INTACCT_RW"
+      - name: "AR_PRD_AP_BILL_AZURE_PIPELINE"        
+      - name: "AR_PRD_WEBAPP_DJANGO"        
+    users_granted:
+      - name: "SVC_PRD_WEBAPP_AP_BILL_CODING_USER"
+      - name: "SVC_PRD_WF_AP_BILL_CODING_USER"

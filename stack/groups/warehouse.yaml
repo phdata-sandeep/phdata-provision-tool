@@ -31,8 +31,13 @@ defaults:
 entries:
   - name: "ENGINEERTEAM"
     comment: PRD team warehouse
-  - name: "SHARED_LOAD"
-    comment: Warehouse for Shared ELT - PRD
-
+  - name: "FIVETRAN"
+    comment: Warehouse for FIVETRAN - PRD
+  - name: AP_BILL_AZURE_PIPELINE
+    warehouse_size: SMALL
+    comment: Warehouse for AP Bill Azure Pipeline - PRD
+  - name: WEBAPP_DJANGO
+    warehouse_size: SMALL
+    comment: Warehouse for Webapp Django - PRD
 
   

@@ -39,5 +39,8 @@ entries:
   - name: WEBAPP_DJANGO
     warehouse_size: SMALL
     comment: Warehouse for Webapp Django - PRD
+  - name: SNOWFLAKEREADER
+    warehouse_size: XSMALL
+    comment: Warehouse to access snowflake database - PRD
 
   

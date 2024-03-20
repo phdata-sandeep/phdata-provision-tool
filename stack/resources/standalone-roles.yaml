@@ -1,6 +1,5 @@
 roles:
 - name: "DR_PRD_SNOWFLAKE_RO"
-- name: "AR_PRD_SNOWFLAKEREADER"
 privilegeGrants:
  - privilege: "IMPORTED PRIVILEGES"
    objectType: "DATABASE"

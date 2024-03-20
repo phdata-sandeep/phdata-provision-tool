@@ -5,7 +5,7 @@ defaults:
   environment: PRD
   # warehouse defaults
   warehouse_size: XSMALL
-  auto_suspend: 600
+  auto_suspend: 60
   auto_resume: true
   comment: Toolkit Provision
 #  enable_query_acceleration: false

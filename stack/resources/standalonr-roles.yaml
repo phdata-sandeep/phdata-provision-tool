@@ -1,0 +1,15 @@
+roles:
+- name: "DR_PROD_SNOWFLAKE_RO"
+- name: "FR_PROD_SNOWFLAKE_DATABASE"
+privilegeGrants:
+ - privilege: "IMPORTED PRIVILEGES"
+   objectType: "DATABASE"
+   objectName: "SNOWFLAKE"
+   roleName: "DR_PROD_SNOWFLAKE_RO"
+roleGrants:
+  - name: "DR_PROD_SNOWFLAKE_RO"
+    toRoles: 
+      - "FR_PROD_SNOWFLAKE_DATABASE"
+  - name: "FR_PROD_SNOWFLAKE_DATABASE"
+    toRoles:
+      - "SYSADMIN"

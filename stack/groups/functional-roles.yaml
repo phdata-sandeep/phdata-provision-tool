@@ -18,7 +18,6 @@ entries:
     granted_roles:
       - name: "DR_S_PRD_APP_INTACCT_RO"
       - name: "DR_S_PRD_WF_AP_BILL_CODING_RO"
-
   - role_name: "FR_FIVETRAN"
     users_granted:
       - name: "SVC_PRD_WF_AP_BILL_CODING_USER"
@@ -38,3 +37,11 @@ entries:
     users_granted:
       - name: "SVC_PRD_WEBAPP_AP_BILL_CODING_USER"
       - name: "SVC_PRD_WF_AP_BILL_CODING_USER"
+      
+  - role_name: "FR_PRD_SNOWFLAKE_DATABASE"
+    granted_roles:
+      - name: "DR_PRD_SNOWFLAKE_RO"
+      - name: "AR_PRD_SNOWFLAKEREADER"
+      - name: "SYSADMIN"
+    users_granted:
+      - name: "JEANINE@CONSEROGLOBAL.COM"

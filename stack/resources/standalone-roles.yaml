@@ -1,0 +1,7 @@
+roles:
+- name: "DR_PRD_SNOWFLAKE_RO"
+privilegeGrants:
+ - privilege: "IMPORTED PRIVILEGES"
+   objectType: "DATABASE"
+   objectName: "SNOWFLAKE"
+   roleName: "DR_PRD_SNOWFLAKE_RO"

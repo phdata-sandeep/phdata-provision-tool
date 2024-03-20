@@ -42,6 +42,5 @@ entries:
     granted_roles:
       - name: "DR_PRD_SNOWFLAKE_RO"
       - name: "AR_PRD_SNOWFLAKEREADER"
-      - name: "SYSADMIN"
     users_granted:
       - name: "JEANINE@CONSEROGLOBAL.COM"

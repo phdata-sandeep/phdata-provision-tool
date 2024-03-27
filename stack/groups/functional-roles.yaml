@@ -18,12 +18,15 @@ entries:
     granted_roles:
       - name: "DR_S_PRD_APP_INTACCT_RO"
       - name: "DR_S_PRD_WF_AP_BILL_CODING_RO"
+      - name: "AR_PRD_ENGINEERTEAM"
     users_granted:
       - name: "ASHOKA.M@CONSEROGLOBAL.COM"
       - name: "DAMODARAM.R@CONSEROGLOBAL.COM"
       - name: "NAVEEN.M@CONSEROGLOBAL.COM"
       - name: "RAVI.M@CONSEROGLOBAL.COM"
       - name: "VINAYA.K@CONSEROGLOBAL.COM"
+      - name: "AJAY.PHDATA@CONSEROGLOBAL.COM"
+      - name: "BALBIR.PHDATA@CONSEROGLOBAL.COM"
 
 
   - role_name: "FR_FIVETRAN"

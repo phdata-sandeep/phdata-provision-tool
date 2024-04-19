@@ -13,6 +13,7 @@ entries:
       - name: "PSINGHA.PHDATA@CONSEROGLOBAL.COM"
 #      - name: "LAVANYAS"
       - name: "BLEDER.PHDATA@CONSEROGLOBAL.COM"
+        destroy: true
 
   - role_name: "FR_DATA_READERS"
     granted_roles:

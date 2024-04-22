@@ -11,7 +11,9 @@ entries:
       - name: "BALBIR.PHDATA@CONSEROGLOBAL.COM"
       - name: "AJAY.PHDATA@CONSEROGLOBAL.COM"
       - name: "PSINGHA.PHDATA@CONSEROGLOBAL.COM"
-#      - name: "LAVANYAS"
+      - name: "PRATIK.PHDATA@CONSEROGLOBAL.COM"
+      - name: "ANJALI.PHDATA@CONSEROGLOBAL.COM"
+      - name: "LAVANYAS.PHDATA@CONSEROGLOBAL.COM"
       - name: "BLEDER.PHDATA@CONSEROGLOBAL.COM"
         destroy: true
 
@@ -31,7 +33,7 @@ entries:
       - name: "RAFAEL.PHDATA@CONSEROGLOBAL.COM"
       - name: "PRATIK.PHDATA@CONSEROGLOBAL.COM"
       - name: "ANJALI.PHDATA@CONSEROGLOBAL.COM"
-
+   
 
   - role_name: "FR_FIVETRAN"
     users_granted:
@@ -59,3 +61,11 @@ entries:
       - name: "AR_PRD_SNOWFLAKEREADER"
     users_granted:
       - name: "JEANINE@CONSEROGLOBAL.COM"
+
+  - role_name: "CDOPS_REPORTING_USER"
+    users_granted:
+      - name: "RAFAEL.PHDATA@CONSEROGLOBAL.COM"
+      - name: "PRATIK.PHDATA@CONSEROGLOBAL.COM"
+      - name: "ANJALI.PHDATA@CONSEROGLOBAL.COM"
+      - name: "PSINGHA.PHDATA@CONSEROGLOBAL.COM"
+      - name: "LAVANYAS.PHDATA@CONSEROGLOBAL.COM"

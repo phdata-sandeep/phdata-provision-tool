@@ -10,6 +10,9 @@ entries:
   
   - admin_role: "ACCOUNTADMIN"
     user: "CCRAWFORD.PHDATA@CONSEROGLOBAL.COM"
+
+  - admin_role: "ACCOUNTADMIN"
+    user: "BALBIR.PHDATA@CONSEROGLOBAL.COM"
 #  - admin_role: "ACCOUNTADMIN"
 #    user: "USER1@PHDATA.IO"
 #

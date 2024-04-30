@@ -17,7 +17,7 @@ entries:
       - name: "AJINKYA.NANDURDIKAR@CONSEROGLOBAL.COM"
       - name: "BLEDER.PHDATA@CONSEROGLOBAL.COM"
         destroy: true
-
+      - name: "ANSARI.PHDATA@CONSEROGLOBAL.COM"
   - role_name: "FR_DATA_READERS"
     granted_roles:
       - name: "DR_S_PRD_APP_INTACCT_RO"
@@ -34,7 +34,7 @@ entries:
       - name: "RAFAEL.PHDATA@CONSEROGLOBAL.COM"
       - name: "PRATIK.PHDATA@CONSEROGLOBAL.COM"
       - name: "ANJALI.PHDATA@CONSEROGLOBAL.COM"
-   
+      - name: "ANSARI.PHDATA@CONSEROGLOBAL.COM"
 
   - role_name: "FR_FIVETRAN"
     users_granted:

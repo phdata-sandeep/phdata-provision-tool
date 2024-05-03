@@ -35,7 +35,8 @@ entries:
       - name: "PRATIK.PHDATA@CONSEROGLOBAL.COM"
       - name: "ANJALI.PHDATA@CONSEROGLOBAL.COM"
       - name: "ANSARI.PHDATA@CONSEROGLOBAL.COM"
-
+      - name: "AFRISTO.PHDATA@CONSEROGLOBAL.COM"
+      - name: "JEANINE@CONSEROGLOBAL.COM"
   - role_name: "FR_FIVETRAN"
     users_granted:
       - name: "SVC_PRD_WF_AP_BILL_CODING_USER"
@@ -62,6 +63,7 @@ entries:
       - name: "AR_PRD_SNOWFLAKEREADER"
     users_granted:
       - name: "JEANINE@CONSEROGLOBAL.COM"
+      - name: "AFRISTO.PHDATA@CONSEROGLOBAL.COM"
 
   - role_name: "CDOPS_REPORTING_USER"
     users_granted:

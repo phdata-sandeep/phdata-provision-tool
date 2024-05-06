@@ -43,6 +43,7 @@ entries:
       - name: "ANJALI.PHDATA@CONSEROGLOBAL.COM"
       - name: "LAVANYAS.PHDATA@CONSEROGLOBAL.COM"
       - name: "AJINKYA.NANDURDIKAR@CONSEROGLOBAL.COM"
+      - name: "DAVID@CONSEROGLOBAL.COM"
 
   - role_name: "FR_FIVETRAN"
     users_granted:
@@ -79,3 +80,4 @@ entries:
       - name: "ANJALI.PHDATA@CONSEROGLOBAL.COM"
       - name: "PSINGHA.PHDATA@CONSEROGLOBAL.COM"
       - name: "LAVANYAS.PHDATA@CONSEROGLOBAL.COM"
+      - name: "DAVID@CONSEROGLOBAL.COM"

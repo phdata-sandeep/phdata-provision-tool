@@ -72,6 +72,7 @@ entries:
     users_granted:
       - name: "JEANINE@CONSEROGLOBAL.COM"
       - name: "AFRISTO.PHDATA@CONSEROGLOBAL.COM"
+      - name: "DAVID@CONSEROGLOBAL.COM"
 
   - role_name: "CDOPS_REPORTING_USER"
     users_granted:

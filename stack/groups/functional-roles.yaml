@@ -83,6 +83,15 @@ entries:
       - name: "PSINGHA.PHDATA@CONSEROGLOBAL.COM"
       - name: "LAVANYAS.PHDATA@CONSEROGLOBAL.COM"
       - name: "DAVID@CONSEROGLOBAL.COM"
+      - name: "JEANINE@CONSEROGLOBAL.COM"
+      - name : "RAVI.M@CONSEROGLOBAL.COM  "
+      - name : "ASHOKA.M@CONSEROGLOBAL.COM"
+      - name : "NAVEEN.M@CONSEROGLOBAL.COM"
+      - name : "DAMODARAM.R@CONSEROGLOBAL.COM"
+      - name : "SALEEM.M@CONSEROGLOBAL.COM"
+      - name : "BALAJI.ANANDAN@CONSEROGLOBAL.COM"
+      - name : "VEMA.R@CONSEROGLOBAL.COM"
+      - name : "SATHISH.KUMAR@CONSEROGLOBAL.COM"
 
   - role_name: "CDOPS_REPORTING_USER"
     users_granted:

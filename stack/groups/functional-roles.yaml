@@ -75,7 +75,7 @@ entries:
       - name: "AFRISTO.PHDATA@CONSEROGLOBAL.COM"
       - name: "DAVID@CONSEROGLOBAL.COM"
 
-  - role_name: "CDOPS_REPORTING_USER"
+  - role_name: "CDOPS_REPORT_USER"
     users_granted:
       - name: "RAFAEL.PHDATA@CONSEROGLOBAL.COM"
       - name: "PRATIK.PHDATA@CONSEROGLOBAL.COM"

@@ -7,7 +7,6 @@ entries:
       - name: "DR_S_PRD_APP_INTACCT_RO"
       - name: "DR_S_PRD_WF_AP_BILL_CODING_RO"
       - name: "AR_PRD_ENGINEERTEAM"
-      - name: "CDOPS_REPORT_USER"
     users_granted:  
       - name: "BALBIR.PHDATA@CONSEROGLOBAL.COM"
       - name: "AJAY.PHDATA@CONSEROGLOBAL.COM"

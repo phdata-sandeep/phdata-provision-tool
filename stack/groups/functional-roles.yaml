@@ -18,6 +18,7 @@ entries:
       - name: "BLEDER.PHDATA@CONSEROGLOBAL.COM"
         destroy: true
       - name: "ANSARI.PHDATA@CONSEROGLOBAL.COM"
+
   - role_name: "FR_DATA_READERS"
     granted_roles:
       - name: "DR_S_PRD_APP_INTACCT_RO"
@@ -61,7 +62,8 @@ entries:
       - name: "DR_S_PRD_WF_AP_BILL_CODING_RW"     
       - name: "DR_S_PRD_APP_INTACCT_RW"
       - name: "AR_PRD_AP_BILL_AZURE_PIPELINE"        
-      - name: "AR_PRD_WEBAPP_DJANGO"        
+      - name: "AR_PRD_WEBAPP_DJANGO"  
+      - name: "CDOPS_ADMIN"        
     users_granted:
       - name: "SVC_PRD_WEBAPP_AP_BILL_CODING_USER"
       - name: "SVC_PRD_WF_AP_BILL_CODING_USER"

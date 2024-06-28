@@ -24,9 +24,9 @@ defaults:
     - threshold: 50
       action: NOTIFY
     - threshold: 75
-      action: SUSPEND
+      action: NOTIFY
     - threshold: 90
-      action: SUSPEND_IMMEDIATE
+      action: NOTIFY
 
 entries:
   - name: "ENGINEERTEAM"

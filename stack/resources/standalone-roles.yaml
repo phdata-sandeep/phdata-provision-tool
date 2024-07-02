@@ -1,7 +1,12 @@
 roles:
+- name: "AR_PRD_MONITOR_RM"
 - name: "DR_PRD_SNOWFLAKE_RO"
 privilegeGrants:
  - privilege: "IMPORTED PRIVILEGES"
    objectType: "DATABASE"
    objectName: "SNOWFLAKE"
    roleName: "DR_PRD_SNOWFLAKE_RO"
+roleGrants:
+ - name: "AR_PRD_MONITOR_RM"
+   toRoles:
+    - "SYSADMIN"

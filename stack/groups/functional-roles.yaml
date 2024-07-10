@@ -46,6 +46,7 @@ entries:
       - name: "AJINKYA.NANDURDIKAR@CONSEROGLOBAL.COM"
       - name: "DAVID@CONSEROGLOBAL.COM"
       - name: "SALEEM.M@CONSEROGLOBAL.COM"
+      - name: "MAYANK.WADHWANI@CONSEROGLOBAL.COM"
 
   - role_name: "FR_FIVETRAN"
     users_granted:
@@ -94,6 +95,7 @@ entries:
       - name : "BALAJI.ANANDAN@CONSEROGLOBAL.COM"
       - name : "VEMA.R@CONSEROGLOBAL.COM"
       - name : "SATHISH.KUMAR@CONSEROGLOBAL.COM"
+      - name: "MAYANK.WADHWANI@CONSEROGLOBAL.COM"
 
   - role_name: "CDOPS_REPORTING_USER"
     users_granted:

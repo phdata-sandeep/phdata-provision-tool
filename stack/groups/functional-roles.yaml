@@ -18,7 +18,7 @@ entries:
       - name: "BLEDER.PHDATA@CONSEROGLOBAL.COM"
         destroy: true
       - name: "ANSARI.PHDATA@CONSEROGLOBAL.COM"
-
+      - name: "TARUN.NAHAR@CONSEROGLOBAL.COM"
   - role_name: "FR_DATA_READERS"
     granted_roles:
       - name: "DR_S_PRD_APP_INTACCT_RO"
@@ -47,6 +47,7 @@ entries:
       - name: "DAVID@CONSEROGLOBAL.COM"
       - name: "SALEEM.M@CONSEROGLOBAL.COM"
       - name: "MAYANK.WADHWANI@CONSEROGLOBAL.COM"
+      - name: "TARUN.NAHAR@CONSEROGLOBAL.COM"
 
   - role_name: "FR_FIVETRAN"
     users_granted:
@@ -87,15 +88,16 @@ entries:
       - name: "LAVANYAS.PHDATA@CONSEROGLOBAL.COM"
       - name: "DAVID@CONSEROGLOBAL.COM"
       - name: "JEANINE@CONSEROGLOBAL.COM"
-      - name : "RAVI.M@CONSEROGLOBAL.COM"
-      - name : "ASHOKA.M@CONSEROGLOBAL.COM"
-      - name : "NAVEEN.M@CONSEROGLOBAL.COM"
-      - name : "DAMODARAM.R@CONSEROGLOBAL.COM"
-      - name : "SALEEM.M@CONSEROGLOBAL.COM"
-      - name : "BALAJI.ANANDAN@CONSEROGLOBAL.COM"
-      - name : "VEMA.R@CONSEROGLOBAL.COM"
-      - name : "SATHISH.KUMAR@CONSEROGLOBAL.COM"
+      - name: "RAVI.M@CONSEROGLOBAL.COM"
+      - name: "ASHOKA.M@CONSEROGLOBAL.COM"
+      - name: "NAVEEN.M@CONSEROGLOBAL.COM"
+      - name: "DAMODARAM.R@CONSEROGLOBAL.COM"
+      - name: "SALEEM.M@CONSEROGLOBAL.COM"
+      - name: "BALAJI.ANANDAN@CONSEROGLOBAL.COM"
+      - name: "VEMA.R@CONSEROGLOBAL.COM"
+      - name: "SATHISH.KUMAR@CONSEROGLOBAL.COM"
       - name: "MAYANK.WADHWANI@CONSEROGLOBAL.COM"
+      - name: "TARUN.NAHAR@CONSEROGLOBAL.COM"
 
   - role_name: "CDOPS_REPORTING_USER"
     users_granted:

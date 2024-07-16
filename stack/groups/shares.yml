@@ -1,0 +1,34 @@
+template:
+  path: shares.yaml
+
+entries: 
+  - share_name: "PROD1_SHARE"
+    destroy: false
+    accounts: YYB19861
+    database_name:
+      - name: S_PRD_APP_INTACCT
+        destroy: false
+        schema_name:
+          - name: epiq
+            destroy: false
+          - name: techopp
+            destroy: false
+          - name: dropoff
+            destroy: false
+        tables_list:
+          - name: class
+            destroy: false
+          - name: customer
+            destroy: false
+          - name: department
+            destroy: false
+          - name: gl_account
+            destroy: false
+          - name: item
+            destroy: false
+          - name: location
+            destroy: false
+          - name: project
+            destroy: false
+          - name: vendor
+            destroy: false

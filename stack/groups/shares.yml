@@ -7,15 +7,26 @@ entries:
     accounts: YYB19861
     database_name:
       - name: S_PRD_APP_INTACCT
+        destroy: false
         schema_name:
           - name: epiq
+            destroy: true
           - name: techopp
+            destroy: false
         tables_list:
           - name: class
+            destroy: false
           - name: customer
+            destroy: false
           - name: department
+            destroy: false
           - name: gl_account
+            destroy: false
           - name: item
+            destroy: false
           - name: location
+            destroy: false
           - name: project
+            destroy: false
           - name: vendor
+            destroy: true

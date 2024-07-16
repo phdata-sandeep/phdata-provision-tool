@@ -7,7 +7,7 @@ shareGrants:
   {% for dname in database_name %}
   - privilege: "USAGE"
     objectType: "DATABASE"
-    objectName: "dname.name"
+    objectName: "{{dname.name}}"
     shareName: "{{share_name}}"
   {% for sname in dname.schema_name %}  
   - privilege: "USAGE"

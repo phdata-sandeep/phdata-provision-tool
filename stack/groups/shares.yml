@@ -10,7 +10,7 @@ entries:
         destroy: false
         schema_name:
           - name: epiq
-            destroy: true
+            destroy: false
           - name: techopp
             destroy: false
           - name: dropoff
@@ -31,4 +31,4 @@ entries:
           - name: project
             destroy: false
           - name: vendor
-            destroy: true
+            destroy: false

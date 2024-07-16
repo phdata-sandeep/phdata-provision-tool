@@ -3,7 +3,7 @@ shares:
     accounts:
       - "{{accounts}}"
 
-privilegeGrants:
+shareGrants:
   {% for dname in database_name %}
   - privilege: "USAGE"
     objectType: "DATABASE"

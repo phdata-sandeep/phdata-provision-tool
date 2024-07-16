@@ -5,3 +5,17 @@ entries:
   - share_name: "PROD1_SHARE"
     destroy: false
     accounts: YYB19861
+    database_name:
+      - name: S_PRD_APP_INTACCT
+        schema_name:
+          - name: epiq
+          - name: techopp
+        tables_list:
+          - name: class
+          - name: customer
+          - name: department
+          - name: gl_account
+          - name: item
+          - name: location
+          - name: project
+          - name: vendor

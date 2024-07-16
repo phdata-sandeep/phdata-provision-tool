@@ -2,3 +2,28 @@ shares:
   - name: "{{share_name}}"
     accounts:
       - "{{accounts}}"
+
+privilegeGrants:
+  {% for dname in database_name %}
+  - privilege: "USAGE"
+    objectType: "DATABASE"
+    objectName: "dname.name"
+    shareName: "{{share_name}}"
+  {% for sname in dname.schema_name %}  
+  - privilege: "USAGE"
+    objectType: "SCHEMA"
+    objectName: "{{dname.name}}.{{sname.name}}"
+    shareName: "{{share_name}}"  
+  {% for tname  in dname.tables_list %}
+  - privilege: "SELECT"
+    objectType: "TABLE"
+    objectName: "{{dname.name}}.{{sname.name}}.{{tname.name}}"
+    shareName: "{{share_name}}"  
+  {% endfor %}
+  {% endfor %}
+  {% endfor %}
+
+
+
+
+

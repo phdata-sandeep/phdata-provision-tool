@@ -1,0 +1,4 @@
+shares:
+  - name: "{{share_name}}"
+    accounts:
+      - "{{accounts}}"

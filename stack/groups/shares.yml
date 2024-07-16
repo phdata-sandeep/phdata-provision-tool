@@ -1,0 +1,7 @@
+template:
+  path: shares.yaml
+
+entries: 
+  - share_name: "PROD1_SHARE"
+    destroy: false
+    accounts: YYB19861

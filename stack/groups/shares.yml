@@ -3,7 +3,7 @@ template:
 
 entries: 
   - share_name: "PROD1_SHARE"
-    destroy: false
+    destroy: true
     accounts: YYB19861
     database_name:
       - name: S_PRD_APP_INTACCT

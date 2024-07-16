@@ -13,6 +13,8 @@ entries:
             destroy: true
           - name: techopp
             destroy: false
+          - name: dropoff
+            destroy: false
         tables_list:
           - name: class
             destroy: false

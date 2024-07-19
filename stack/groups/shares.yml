@@ -1,102 +1,64 @@
 template:
   path: shares.yaml
 
+defaults:
+  destroy: false
+
 entries: 
   - share_name: "INTACCT_SHARE"
-    destroy: false
     accounts: YYB19861
     database_name:
       - name: S_PRD_APP_INTACCT
-        destroy: false
         schema_name:
           - name: AIRFIND
-            destroy: false
           - name: AMF_FOODS
-            destroy: false
           - name: ASSISTSERVICES
-            destroy: false
           - name: ATC
-            destroy: false
           - name: BRICKANDMORTAR
-            destroy: false
           - name: BTNV
-            destroy: false
           - name: CAMP
-            destroy: false
           - name: COLLECTIVE
-            destroy: false
           - name: DECUSOFT
-            destroy: false
           - name: DELTAGLOBAL
-            destroy: false
           - name: DROPOFF
-            destroy: false
           - name: EPIQ
-            destroy: false
           - name: EPSOLUTIONS
-            destroy: false
           - name: ESPARK
-            destroy: false
           - name: FETCHPACKAGE
-            destroy: false
           - name: FINDHELP
-            destroy: false
           - name: FUTURESTAYINC
-            destroy: false
           - name: GUARDIAN
-            destroy: false
           - name: JASPERHEALTH
-            destroy: false
           - name: LEADINGREACH
-            destroy: false
           - name: MARYGOLD
-            destroy: false
           - name: MILEUP
-            destroy: false
           - name: NEOCOVA
-            destroy: false
           - name: OCEANSOUND
-            destroy: false
           - name: PRIA
-            destroy: false
           - name: PRINCETON
-            destroy: false
           - name: RECOVERX
-            destroy: false
           - name: RISKALYZEINC
-            destroy: false
           - name: RYPTECHNOLOGIES
-            destroy: false
           - name: STRAIGHTERLINE
-            destroy: false
           - name: TAILORCARE
-            destroy: false
           - name: TECHOPP
-            destroy: false
           - name: THINGSWEDO
-            destroy: false
           - name: TRAINERRX
-            destroy: false
           - name: VENSANA
-            destroy: false
           - name: XSOLIS
-            destroy: false
           - name: YAPI
-            destroy: false
-        tables_list:
-          - name: class
-            destroy: false
-          - name: customer
-            destroy: false
-          - name: department
-            destroy: false
-          - name: gl_account
-            destroy: false
-          - name: item
-            destroy: false
-          - name: location
-            destroy: false
-          - name: project
-            destroy: false
-          - name: vendor
-            destroy: false
+          - name: GROUPBLACK
+          - name: LUNCHDROP
+          - name: SMARTECH
+          - name: EDUCATIONADV
+          - name: ANTHONYBARNUM
+          - name: RTRPILATES
+          - name: SYNACOR
+          - name: HOMECAREPULSE
+          - name: GROWTHCATALYST
+          - name: HAVENTECH
+          - name: TUESDAYHEALTH
+          - name: ARINSIGHTS
+          - name: MEDFIRST
+          - name: PROCUREMENTADVISOR
+          - name: ONCALLPHYSICIAN

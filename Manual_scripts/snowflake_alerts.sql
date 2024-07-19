@@ -1,3 +1,86 @@
+CREATE OR REPLACE PROCEDURE CDOPS_STATESTORE.MONITORING.SP_WAREHOUSE_QUEUEING()
+RETURNS TABLE()
+LANGUAGE SQL
+AS
+$$
+
+BEGIN
+LET res RESULTSET := (
+      WITH agg AS (
+    SELECT
+        warehouse_name,
+        DATE(START_TIME) AS usage_date,
+        MAX(ROUND(AVG_QUEUED_LOAD, 0)) AS QUEUED_LOAD_AVG,
+        MAX(ROUND(AVG_QUEUED_PROVISIONING, 0)) AS QUEUED_PROVISIONING_AVG
+    FROM snowflake.ACCOUNT_USAGE.warehouse_load_history
+    WHERE
+        start_time >= dateadd(HOURS, -2, current_timestamp())
+        AND warehouse_name IN ('PRD_AP_BILL_AZURE_PIPELINE_WH','PRD_FIVETRAN_WH','PRD_WEBAPP_DJANGO_WH')
+    GROUP BY
+      WAREHOUSE_NAME,
+      usage_date
+    ORDER BY QUEUED_LOAD_AVG DESC
+)
+
+SELECT * FROM agg WHERE QUEUED_LOAD_AVG > 0 OR QUEUED_PROVISIONING_AVG > 0
+);
+RETURN TABLE(res);
+END;
+$$;
+
+
+CREATE OR REPLACE PROCEDURE CDOPS_STATESTORE.MONITORING.SP_WAREHOUSE_QUEUEING_EMAIL()
+RETURNS VARCHAR
+LANGUAGE SQL
+AS
+$$
+DECLARE
+
+  c1 CURSOR FOR WITH email_body AS (
+                  WITH query_wrapper AS (
+                        WITH agg AS (
+    SELECT
+        warehouse_name,
+        DATE(START_TIME) AS usage_date,
+        MAX(ROUND(AVG_QUEUED_LOAD, 0)) AS QUEUED_LOAD_AVG,
+        MAX(ROUND(AVG_QUEUED_PROVISIONING, 0)) AS QUEUED_PROVISIONING_AVG
+    FROM snowflake.ACCOUNT_USAGE.warehouse_load_history
+    WHERE
+        start_time >= dateadd(HOURS, -2, current_timestamp())
+        AND warehouse_name IN ('PRD_AP_BILL_AZURE_PIPELINE_WH','PRD_FIVETRAN_WH','PRD_WEBAPP_DJANGO_WH')
+    GROUP BY
+      WAREHOUSE_NAME,
+      usage_date
+    ORDER BY QUEUED_LOAD_AVG DESC
+)
+
+SELECT * FROM agg WHERE QUEUED_LOAD_AVG > 0 OR QUEUED_PROVISIONING_AVG > 0
+                  ) 
+                  SELECT TO_VARCHAR(OBJECT_CONSTRUCT(*)) AS all_rows_string FROM query_wrapper
+            )
+            SELECT listagg(all_rows_string, '\n\n') as email_body_text FROM email_body;
+    subj varchar;
+    msg varchar;
+  BEGIN
+      OPEN c1;
+      FETCH c1 INTO msg;
+      msg := 'TO VIEW THE OUTPUT OF THE ALERT, RUN: \n CALL CDOPS_STATESTORE.MONITORING.SP_WAREHOUSE_QUEUEING();' || '\n\n OUTPUT OF ALERT:\n' || msg;
+      subj := 'SNOWFLAKE ALERT - WAREHOUSE_QUEUEING - ACCOUNT ' || current_account() || ' - ' || current_timestamp();
+      call system$send_email('rm_email_int','consero@phdata.io',:subj,:msg);
+  END;
+$$;
+
+
+CREATE OR REPLACE ALERT CDOPS_STATESTORE.MONITORING.WAREHOUSE_QUEUEING
+  WAREHOUSE = CDOPS_REPORT_WH
+  SCHEDULE = 'using cron 0 */2 * * * America/Los_Angeles'
+  if (exists (
+        CALL CDOPS_STATESTORE.MONITORING.SP_WAREHOUSE_QUEUEING()
+     ))
+  THEN
+    CALL CDOPS_STATESTORE.MONITORING.SP_WAREHOUSE_QUEUEING_EMAIL();
+
+ALTER ALERT CDOPS_STATESTORE.MONITORING.WAREHOUSE_QUEUEING RESUME;
 CREATE OR REPLACE PROCEDURE CDOPS_STATESTORE.MONITORING.SP_TASK_ERRORS()
 RETURNS TABLE()
 LANGUAGE SQL

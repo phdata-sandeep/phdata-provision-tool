@@ -14,12 +14,14 @@ shareGrants:
     objectType: "SCHEMA"
     objectName: "{{dname.name}}.{{sname.name}}"
     shareName: "{{share_name}}"  
-  {% for tname  in dname.tables_list %}
   - privilege: "SELECT"
-    objectType: "TABLE"
-    objectName: "{{dname.name}}.{{sname.name}}.{{tname.name}}"
+    objectType: "ALL TABLES IN SCHEMA "
+    objectName: "{{dname.name}}.{{sname.name}}"
     shareName: "{{share_name}}"  
-  {% endfor %}
+  - privilege: "SELECT"
+    objectType: "FUTURE TABLES IN SCHEMA "
+    objectName: "{{dname.name}}.{{sname.name}}"
+    shareName: "{{share_name}}"  
   {% endfor %}
   {% endfor %}
 

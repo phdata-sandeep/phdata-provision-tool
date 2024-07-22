@@ -62,3 +62,4 @@ entries:
           - name: MEDFIRST
           - name: PROCUREMENTADVISOR
           - name: ONCALLPHYSICIAN
+          - name: GLOBAL_DATA_DBO

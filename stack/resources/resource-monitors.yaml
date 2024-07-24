@@ -1,6 +1,6 @@
 resourceMonitors:
   - name: PRD_ACCOUNT_RM
-    creditQuota: 200
+    creditQuota: 1000
 #    startTimestamp: IMMEDIATELY
 #    frequency: MONTHLY
     triggers:

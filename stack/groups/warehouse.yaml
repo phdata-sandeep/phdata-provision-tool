@@ -37,7 +37,7 @@ entries:
     warehouse_size: SMALL
     comment: Warehouse for AP Bill Azure Pipeline - PRD
     auto_suspend: 300
-    create_rm: 250
+    creditQuota: 250
   - name: WEBAPP_DJANGO
     warehouse_size: SMALL
     comment: Warehouse for Webapp Django - PRD

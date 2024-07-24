@@ -36,9 +36,12 @@ entries:
   - name: AP_BILL_AZURE_PIPELINE
     warehouse_size: SMALL
     comment: Warehouse for AP Bill Azure Pipeline - PRD
+    auto_suspend: 300
+    creditQuota: 250
   - name: WEBAPP_DJANGO
     warehouse_size: SMALL
     comment: Warehouse for Webapp Django - PRD
+    creditQuota: 200
   - name: SNOWFLAKEREADER
     warehouse_size: XSMALL
     comment: Warehouse to access snowflake database - PRD

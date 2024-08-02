@@ -47,7 +47,7 @@ entries:
       - name: "DAVID@CONSEROGLOBAL.COM"
       - name: "SALEEM.M@CONSEROGLOBAL.COM"
       - name: "MAYANK.WADHWANI@CONSEROGLOBAL.COM"
-      - name: "TARUN.NAHAR@CONSEROGLOBAL.COM"
+      - name: "TARUN.NAHAR@CONSEROGLOBAL.COM"     
 
   - role_name: "FR_FIVETRAN"
     users_granted:

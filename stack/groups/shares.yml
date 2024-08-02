@@ -63,3 +63,18 @@ entries:
           - name: PROCUREMENTADVISOR
           - name: ONCALLPHYSICIAN
           - name: GLOBAL_DATA_DBO
+          - name: ONEPEAKMEDICAL
+          - name: MULTITRACKS
+          - name: EPAYPOLICY
+          - name: REACHMANAGEMENT
+          - name: RAINTREE
+          - name: USATP
+          - name: FUNDIFY
+          - name: CIS
+          - name: PERMIAN
+          - name: SORTIUM
+          - name: MAKOPROVIDERSOLUTIONS
+          - name: PATIENTSLIKEME
+          - name: MCPINVEST
+          - name: OK2SOLUTIONS
+          - name: SOFTWORKS

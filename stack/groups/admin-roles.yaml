@@ -16,6 +16,9 @@ entries:
 
   - admin_role: "ACCOUNTADMIN"
     user: "MANJUNATH.PHDATA@CONSEROGLOBAL.COM"
+
+  - admin_role: "ACCOUNTADMIN"
+    user: "RFERNANDEZ.PHDATA@CONSEROGLOBAL.COM"  
 #
 #  - admin_role: "SECURITYADMIN"
 #    user: "USER2@PHDATA.IO"

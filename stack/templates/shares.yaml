@@ -13,11 +13,11 @@ shareGrants:
   - privilege: "USAGE"
     objectType: "SCHEMA"
     objectName: "{{dname.name}}.{{sname.name}}"
-    shareName: "{{share_name}}"  
+    shareName: "{{share_name}}"
   - privilege: "SELECT"
     objectType: "ALL TABLES IN SCHEMA "
     objectName: "{{dname.name}}.{{sname.name}}"
-    shareName: "{{share_name}}"  
+    shareName: "{{share_name}}"
   {% endfor %}
   {% endfor %}
 

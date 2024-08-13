@@ -14,7 +14,7 @@ shareGrants:
     objectType: "SCHEMA"
     objectName: "{{dname.name}}.{{sname.name}}"
     shareName: "{{share_name}}"
-    destroy: {{sname.destroy}}  
+    destroy: "{{sname.destroy}}"
   - privilege: "SELECT"
     objectType: "ALL TABLES IN SCHEMA "
     objectName: "{{dname.name}}.{{sname.name}}"

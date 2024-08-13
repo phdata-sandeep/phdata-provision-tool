@@ -39,7 +39,7 @@ entries:
           - name: RECOVERX
           - name: RISKALYZEINC
           - name: RYPTECHNOLOGIES
-            destroy: true
+            d_flag: true
           - name: STRAIGHTERLINE
           - name: TAILORCARE
           - name: TECHOPP

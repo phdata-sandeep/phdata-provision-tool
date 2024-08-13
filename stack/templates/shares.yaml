@@ -14,12 +14,12 @@ shareGrants:
     objectType: "SCHEMA"
     objectName: "{{dname.name}}.{{sname.name}}"
     shareName: "{{share_name}}"
-    destroy: {{d_flag}}  
+    destroy: {{sname.d_flag}}  
   - privilege: "SELECT"
     objectType: "ALL TABLES IN SCHEMA "
     objectName: "{{dname.name}}.{{sname.name}}"
     shareName: "{{share_name}}"
-    destroy: {{d_flag}}  
+    destroy: {{sname.d_flag}}  
   {% endfor %}
   {% endfor %}
 

@@ -47,6 +47,6 @@ entries:
     comment: Warehouse to access snowflake database - PRD
   - name: OPTIMUS_WEB
     warehouse_size: SMALL
-    comment: Warehouse for Webapp - PRD    
+    comment: Warehouse for OPTIMUS Webapp - PRD    
 
   
